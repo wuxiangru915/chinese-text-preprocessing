@@ -75,9 +75,10 @@ python test01.py
 ├── test01.py              # 主程序文件
 ├── input.txt              # 输入文本文件
 ├── stopwords.txt          # 停用词表文件
-├── word_frequency.txt     # 词频统计结果
-├── top_keywords_tfidf.txt # TF-IDF关键词结果
-├── top_keywords_textrank.txt # TextRank关键词结果
+├── output                 # 结果输出文件夹
+   ├── word_frequency.txt     # 词频统计结果    
+   ├── top_keywords_tfidf.txt # TF-IDF关键词结果
+   ├── top_keywords_textrank.txt # TextRank关键词结果      
 ├── requirements.txt       # 项目依赖
 ├── LICENSE                # 开源许可证
 └── README.md              # 项目说明文档
