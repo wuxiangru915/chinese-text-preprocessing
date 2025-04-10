@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-文本预处理实验
-
+文本预处理工具
 实现功能：
 1. 中文分词（精确模式、搜索引擎模式）
 2. 停用词过滤
@@ -19,9 +17,6 @@ import re
 WORK_DIR = os.path.dirname(os.path.abspath(__file__))
 INPUT_FILE = os.path.join(WORK_DIR, 'input.txt')
 STOPWORDS_FILE = os.path.join(WORK_DIR, 'stopwords.txt')
-WORD_FREQ_FILE = os.path.join(WORK_DIR, 'word_frequency.txt')
-TOP_KEYWORDS_TFIDF_FILE = os.path.join(WORK_DIR, 'top_keywords_tfidf.txt')
-TOP_KEYWORDS_TEXTRANK_FILE = os.path.join(WORK_DIR, 'top_keywords_textrank.txt')
 
 # 默认停用词集合
 DEFAULT_STOPWORDS = {
@@ -134,6 +129,15 @@ def save_results(data, file_path, is_keywords=False):
 
 
 def main():
+    # 创建output目录
+    output_dir = os.path.join(WORK_DIR, 'output')
+    os.makedirs(output_dir, exist_ok=True)  # 确保目录存在
+
+    # 重新定义输出文件路径
+    WORD_FREQ_FILE = os.path.join(output_dir, 'word_frequency.txt')
+    TOP_KEYWORDS_TFIDF_FILE = os.path.join(output_dir, 'top_keywords_tfidf.txt')
+    TOP_KEYWORDS_TEXTRANK_FILE = os.path.join(output_dir, 'top_keywords_textrank.txt')
+
     # 检查并加载输入文件
     if not os.path.exists(INPUT_FILE):
         print(f"输入文件 {INPUT_FILE} 不存在，请先准备文本文件")

@@ -168,8 +168,7 @@ TextRank算法基于图模型，考虑了词语之间的共现关系，能够更
 
 如有任何问题或建议，请通过以下方式联系：
 
-- GitHub Issues: [提交Issue](https://github.com/yourusername/chinese-text-preprocessing/issues)
-- Email: your.email@example.com
+- Email: 1963842589@qq.com
 
 ---
 
